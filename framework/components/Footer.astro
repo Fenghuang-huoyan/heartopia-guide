@@ -1,0 +1,56 @@
+---
+import { siteConfig } from '@site/site.config';
+import { adsConfig } from '@site/ads.config';
+import AdSlot from './AdSlot.astro';
+
+const year = 2026;
+const gaOn = siteConfig.analytics.gaId.trim().length > 0;
+const adsOn = Object.values(adsConfig.slots).some((slot) => {
+  const id = slot.id.trim();
+  return adsConfig.enabled && id.length > 0 && !id.startsWith('ADSTERRA_');
+});
+---
+<footer class="site-footer">
+  <div class="shell">
+    <AdSlot name="footer" variant="footer" />
+    <div class="footer-grid">
+      <div>
+        <h2>Unofficial fan guide</h2>
+        <p class="fine" id="disclaimer">{siteConfig.disclaimer}</p>
+      </div>
+      <div>
+        <h2>On this site</h2>
+        <ul>
+          <li><a href="/redeem-codes">Redeem codes</a></li>
+          <li><a href="/beginner-guide">First week</a></li>
+          <li><a href="/dg-level">DG level</a></li>
+          <li><a href="/make-money">Make gold</a></li>
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Official</h2>
+        <ul>
+          <li><a href={siteConfig.steamUrl}>Steam store</a></li>
+          <li><a href={siteConfig.social.x}>@myheartopia on X</a></li>
+          <li><a href={siteConfig.social.youtube}>YouTube</a></li>
+          <li><a href={siteConfig.supportUrl}>XD support</a></li>
+          <li><a href={`mailto:${siteConfig.supportEmail}`}>{siteConfig.supportEmail}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="privacy" class="fine">
+      <h2>Privacy</h2>
+      <p>
+        This is a static site. It has no accounts and does not ask for your Heartopia login.
+        {gaOn
+          ? 'Google Analytics is enabled with the measurement id in site config.'
+          : 'Google Analytics is not loaded, because analytics.gaId is empty.'}
+        {adsOn
+          ? ' A labeled Adsterra placement loads where a zone key is set.'
+          : ' Advertisements are not loaded, because the Adsterra Native Banner zone key is still empty.'}
+      </p>
+      <p>© {year} {siteConfig.domain}. Heartopia © {siteConfig.publisher}. Steam AppID {siteConfig.steamAppId}.</p>
+    </div>
+  </div>
+</footer>

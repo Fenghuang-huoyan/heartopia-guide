@@ -1,0 +1,236 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@framework/layouts/BaseLayout.astro';
+import QuickAnswer from '@framework/components/QuickAnswer.astro';
+import AdSlot from '@framework/components/AdSlot.astro';
+import FaqList from '@framework/components/FaqList.astro';
+import { loadData } from '@framework/lib/content';
+import { siteConfig } from '@site/site.config';
+import { faqJsonLd, websiteJsonLd } from '@framework/lib/seo';
+
+const meta = loadData<{
+  release: string;
+  price: string;
+  peak: string;
+  peakNote: string;
+  online: string;
+  onlineNote: string;
+  platforms: string;
+  reviews: string;
+  reviewsNote: string;
+}>('meta');
+
+const faq = loadData<{ q: string; a: string; featured?: boolean }[]>('faq');
+const pages = (await getCollection('pages')).sort((a, b) => a.data.order - b.data.order);
+
+const art = {
+  header: '/images/official/steam/header.jpg',
+  house: '/images/official/steam/ss-01.jpg',
+  town: '/images/official/steam/ss-02.jpg',
+  outfit: '/images/official/steam/ss-03.jpg',
+  pets: '/images/official/steam/ss-04.jpg',
+  fish: '/images/official/steam/ss-00.jpg',
+  capsule: '/images/official/steam/capsule-616x353.jpg',
+};
+
+const guideArt: Record<string, string> = {
+  'redeem-codes': art.header,
+  'beginner-guide': art.house,
+  'dg-level': art.town,
+  'farming-seasons': art.pets,
+  'make-money': art.fish,
+  'friendship-gifts': art.outfit,
+  fishing: art.fish,
+  cooking: art.house,
+  'seasons-events': art.capsule,
+  'npcs-gifts': art.town,
+  hobbies: art.pets,
+  faq: art.header,
+};
+
+const doors = [
+  {
+    href: '/redeem-codes',
+    num: '01',
+    title: 'Redeem codes',
+    text: 'Newest strings, the ones trackers already expired, and the watch-menu steps.',
+    image: art.header,
+  },
+  {
+    href: '/beginner-guide',
+    num: '02',
+    title: 'First week',
+    text: 'Tutorial, mailbox, five daily requests, and what to ignore.',
+    image: art.house,
+  },
+  {
+    href: '/dg-level',
+    num: '03',
+    title: 'DG level',
+    text: 'The time-gated rank, and the early milestones that actually open the town.',
+    image: art.town,
+  },
+  {
+    href: '/farming-seasons',
+    num: '04',
+    title: 'Seasonal farming',
+    text: 'Blanc’s seeds, real-time crops, and what to do before the season turns.',
+    image: art.pets,
+  },
+  {
+    href: '/make-money',
+    num: '05',
+    title: 'Make gold',
+    text: 'Cook before you sell. Requests before a long fishing hour.',
+    image: art.fish,
+  },
+  {
+    href: '/friendship-gifts',
+    num: '06',
+    title: 'Friends and gifts',
+    text: 'UID visits are not the same system as an NPC’s favorite flower.',
+    image: art.outfit,
+  },
+];
+---
+<BaseLayout
+  title={siteConfig.homeTitle}
+  description={siteConfig.homeDescription}
+  jsonLd={[
+    websiteJsonLd(),
+    faqJsonLd(faq.filter((item) => item.featured).map((item) => ({ q: item.q, a: item.a }))),
+  ]}
+>
+  <main id="content">
+    <div class="shell">
+      <p class="tape">
+        <span>Fan guide · not affiliated with XD</span>
+        <span>Steam App {siteConfig.steamAppId}</span>
+        <span>{siteConfig.version.label}</span>
+      </p>
+
+      <section class="town-hero">
+        <img
+          class="hero-art"
+          src={siteConfig.art.hero}
+          alt={siteConfig.art.heroAlt}
+          width="1920"
+          height="620"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-panel">
+          <p class="kicker">{siteConfig.developer} · free on Steam · {meta.release}</p>
+          <h1>Heartopia, without the spreadsheet.</h1>
+          <p class="lede">
+            A fan guide for the cozy town: <em>codes that are still worth typing</em>, the first week,
+            the DG rank that gates everything, and seasonal gold. The fish index already exists. We did not clone it.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="/redeem-codes">Redeem codes</a>
+            <a class="btn ghost" href="/beginner-guide">First week</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+          </div>
+          <p class="version-note">{siteConfig.version.detail}</p>
+        </div>
+      </section>
+      <p class="art-credit">
+        Library hero and screenshots are official Steam store assets for App {siteConfig.steamAppId}. See the attribution file shipped with the images.
+      </p>
+
+      <section class="section">
+        <h2>Six doors</h2>
+        <p class="section-intro">
+          Start with the page that matches what you are stuck on. The rest of the guide is the same idea, written out.
+        </p>
+        <div class="door-grid">
+          {doors.map((door) => (
+            <a class="door" href={door.href}>
+              <span class="card-art">
+                <img src={door.image} alt="" width="600" height="338" decoding="async" />
+                <span class="num">{door.num}</span>
+              </span>
+              <span class="card-copy">
+                <h3>{door.title}</h3>
+                <p>{door.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="stat-row" aria-label="Steam figures">
+        <div class="stat"><strong>{meta.price}</strong><span>Steam · {meta.platforms}</span></div>
+        <div class="stat"><strong>{meta.peak}</strong><span>{meta.peakNote}</span></div>
+        <div class="stat"><strong>{meta.online}</strong><span>{meta.onlineNote}</span></div>
+        <div class="stat"><strong>{meta.reviews}</strong><span>{meta.reviewsNote}</span></div>
+      </section>
+
+      <section class="section home-quick">
+        <QuickAnswer
+          sentences={[
+            'Heartopia is XD’s free-to-play co-op life sim on Steam: a house, six hobbies, pets, and a town you share with friends.',
+            'DG level moves mainly through daily resident requests. It does not move just because you fished all evening.',
+            'Type codes in the watch menu, then open the mailbox in front of your house. This site cannot redeem them for you.',
+            `Player figures above are from Steam and SteamCharts around ${siteConfig.version.label.replace('Checked ', '')}. They will change.`,
+          ]}
+        />
+        <AdSlot name="afterQuickAnswer" />
+      </section>
+
+      <section class="section">
+        <h2>The pages</h2>
+        <p class="section-intro">
+          English only. If a number is from a community guide and not from the Steam page, the article says so.
+        </p>
+        <div class="card-grid">
+          {pages.map((page) => (
+            <a class="guide-card" href={`/${page.id}`}>
+              <span class="card-art">
+                <img src={guideArt[page.id]} alt="" width="600" height="338" loading="lazy" decoding="async" />
+              </span>
+              <span class="card-copy">
+                <span class="section-tag">{page.data.section}</span>
+                <h3>{page.data.h1}</h3>
+                <p>{page.data.description}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="scope">
+          <div>
+            <h2>What this wiki is for</h2>
+            <p>
+              Heartopia already has thick wikis. {siteConfig.databases.map((db, i) => (
+                <>
+                  <a href={db.href}>{db.label}</a>
+                  {i < siteConfig.databases.length - 1 ? ', ' : ''}
+                </>
+              ))} keep fish, insects, birds, recipes, and maps. They are the right tools for a completion log.
+            </p>
+            <p>
+              This site stays on four jobs: a redeem-code hub that admits when trackers disagree, a first-week path,
+              the DG levels that actually gate the town, and seasonal farming and gold with the answer at the top of the page.
+            </p>
+          </div>
+          <div>
+            <h2>The town, in Steam’s words</h2>
+            <p>
+              XD shipped Heartopia on Steam on {meta.release}. The store’s line: a multiplayer life sim “crafted for creativity, freedom, and peace,” with hobbies, a house you can build with friends, and pets.
+              Publisher and developer are both listed as XD. Support mail on the store page is {siteConfig.supportEmail}.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-faq">
+        <h2>Short answers</h2>
+        <FaqList featuredOnly />
+        <p><a class="text-link" href="/faq">All FAQ</a></p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>

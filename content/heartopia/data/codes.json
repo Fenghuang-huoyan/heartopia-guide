@@ -1,0 +1,264 @@
+{
+  "checked": "19 Oct 2026",
+  "groups": [
+    {
+      "id": "newest",
+      "title": "Try these first",
+      "intro": "Newest strings, or ones a 19 Oct 2026 list still printed with no expiry. Enter each once. Stop when the game rejects it.",
+      "rows": [
+        {
+          "code": "k9n3m5q1a7r4",
+          "reward": "Not published",
+          "status": "newest",
+          "statusLabel": "New report",
+          "note": "Giga added this on 19 Oct 2026."
+        },
+        {
+          "code": "a4m8r2k7n6q5",
+          "reward": "Not published",
+          "status": "newest",
+          "statusLabel": "New report",
+          "note": "Giga added this on 19 Oct 2026."
+        },
+        {
+          "code": "r2q7a4m9k3n6",
+          "reward": "Not published",
+          "status": "newest",
+          "statusLabel": "Still listed",
+          "note": "On the 19 Oct Giga list. Another tracker logged it as added 5 Oct 2026."
+        },
+        {
+          "code": "p5m1k9q6a2r7",
+          "reward": "Not published",
+          "status": "newest",
+          "statusLabel": "Still listed",
+          "note": "G2A printed it in October with no posted expiry."
+        },
+        {
+          "code": "a9r7n4m2k5q8",
+          "reward": "Not published",
+          "status": "newest",
+          "statusLabel": "Still listed",
+          "note": "G2A printed it in October with no posted expiry."
+        },
+        {
+          "code": "moonlike2609",
+          "reward": "Not published",
+          "status": "conflict",
+          "statusLabel": "Trackers disagree",
+          "note": "Still on Giga’s 19 Oct list. A different tracker marked it expired on 7 Oct 2026."
+        }
+      ]
+    },
+    {
+      "id": "conflict",
+      "title": "September batch — treat as expired",
+      "intro": "Giga’s long 19 Oct page still repeats these. G2A had already marked the same strings expired on 30 Sep 2026, with the same reward line. Try one if you never have. Do not expect the bundle.",
+      "rows": [
+        {
+          "code": "q3n7a2r9k8m5",
+          "reward": "Wishing Star ×3, Dye ×2, Flawless Fluorite ×1",
+          "status": "conflict",
+          "statusLabel": "Likely expired",
+          "note": "G2A expiry 30 Sep 2026."
+        },
+        {
+          "code": "r8a4k6p5q3m1",
+          "reward": "Wishing Star ×3, Dye ×2, Flawless Fluorite ×1",
+          "status": "conflict",
+          "statusLabel": "Likely expired",
+          "note": "G2A expiry 30 Sep 2026."
+        },
+        {
+          "code": "n6q2m9k4a7r3",
+          "reward": "Wishing Star ×3, Dye ×2, Flawless Fluorite ×1",
+          "status": "conflict",
+          "statusLabel": "Likely expired",
+          "note": "G2A expiry 30 Sep 2026."
+        },
+        {
+          "code": "k5p1r8a2n6q7",
+          "reward": "Wishing Star ×3, Dye ×2, Flawless Fluorite ×1",
+          "status": "conflict",
+          "statusLabel": "Likely expired",
+          "note": "G2A expiry 30 Sep 2026."
+        },
+        {
+          "code": "a7m4q9r3k6n2",
+          "reward": "Wishing Star ×3, Dye ×2, Flawless Fluorite ×1",
+          "status": "conflict",
+          "statusLabel": "Likely expired",
+          "note": "G2A expiry 30 Sep 2026. A second tracker also logged an expiry in early October."
+        },
+        {
+          "code": "p2k8n5r7q1a6",
+          "reward": "Wishing Star ×3, Dye ×2, Flawless Fluorite ×1",
+          "status": "conflict",
+          "statusLabel": "Likely expired",
+          "note": "G2A expiry 30 Sep 2026."
+        },
+        {
+          "code": "m9a3q7k2r5n4",
+          "reward": "Wishing Star ×3, Dye ×2, Flawless Fluorite ×1",
+          "status": "conflict",
+          "statusLabel": "Likely expired",
+          "note": "G2A expiry 30 Sep 2026."
+        }
+      ]
+    },
+    {
+      "id": "stale",
+      "title": "Older campaign strings still being copied",
+      "intro": "These are anniversary, summer, and June codes. Pocket Gamer published rewards for them. They are still pasted onto long October lists. Assume they are stale unless the mailbox pays.",
+      "rows": [
+        {
+          "code": "2026summerlights",
+          "reward": "5 blue skyrockets, 5 pink sparklers",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "Pocket Gamer reward line."
+        },
+        {
+          "code": "Cherish180",
+          "reward": "Large half-year bundle (crystals, stars, gold)",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "180-day campaign. Pocket Gamer listed a full bundle."
+        },
+        {
+          "code": "halfyear180",
+          "reward": "Smaller half-year bundle",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "Same campaign family."
+        },
+        {
+          "code": "together180",
+          "reward": "Large half-year bundle",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "Same campaign family."
+        },
+        {
+          "code": "180daysjoy",
+          "reward": "100 Moonlight Crystals",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "Pocket Gamer."
+        },
+        {
+          "code": "oceanguardians",
+          "reward": "100 Moonlight Crystals",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "Pocket Gamer. callofwhales0709 was printed with the same reward."
+        },
+        {
+          "code": "happyjune2026",
+          "reward": "Meat, red beans, paddy seeds, Wishing Stars",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "June campaign."
+        },
+        {
+          "code": "dadstrong4ever",
+          "reward": "Apples, fertilizer, Wishing Stars",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "Pocket Gamer."
+        },
+        {
+          "code": "p3m7r5q9k2",
+          "reward": "Coffee beans, Wishing Stars, Roaming Oak timber",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "One of several coffee-bean codes with the same printed reward."
+        },
+        {
+          "code": "shakeurbody",
+          "reward": "Emote",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "Pocket Gamer listed an emote, not items."
+        },
+        {
+          "code": "lifewithline",
+          "reward": "10 Wishing Stars",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "Pocket Gamer."
+        },
+        {
+          "code": "aughatogift",
+          "reward": "Not published on the lists we checked",
+          "status": "stale",
+          "statusLabel": "Stale risk",
+          "note": "Still copied on the 19 Oct long list."
+        }
+      ]
+    },
+    {
+      "id": "expired",
+      "title": "Agreed expired",
+      "intro": "Launch and early-2026 strings that current lists put in the expired pile. Kept here so you can stop searching them.",
+      "rows": [
+        {
+          "code": "HEARTOPIA2026",
+          "reward": "Launch bundle (expired)",
+          "status": "expired",
+          "statusLabel": "Expired",
+          "note": "On Giga’s expired list."
+        },
+        {
+          "code": "COZYLIFE",
+          "reward": "Launch bundle (expired)",
+          "status": "expired",
+          "statusLabel": "Expired",
+          "note": "On Giga’s expired list."
+        },
+        {
+          "code": "NEWADVENTURE",
+          "reward": "Launch bundle (expired)",
+          "status": "expired",
+          "statusLabel": "Expired",
+          "note": "On Giga’s expired list."
+        },
+        {
+          "code": "happy2026",
+          "reward": "New-year code (expired)",
+          "status": "expired",
+          "statusLabel": "Expired",
+          "note": "On Giga’s expired list."
+        },
+        {
+          "code": "SPRINGFEST2026",
+          "reward": "Spring festival (expired)",
+          "status": "expired",
+          "statusLabel": "Expired",
+          "note": "On Giga’s expired list."
+        },
+        {
+          "code": "FISHINGFUN",
+          "reward": "Hobby promo (expired)",
+          "status": "expired",
+          "statusLabel": "Expired",
+          "note": "On Giga’s expired list, with COZYCOOKING, PETFRIENDS, and DREAMHOUSE."
+        },
+        {
+          "code": "love214",
+          "reward": "February promo (expired)",
+          "status": "expired",
+          "statusLabel": "Expired",
+          "note": "On Giga’s expired list."
+        },
+        {
+          "code": "keepsmiling2026",
+          "reward": "Not published",
+          "status": "expired",
+          "statusLabel": "Expired",
+          "note": "On Giga’s expired list as of 19 Oct 2026."
+        }
+      ]
+    }
+  ]
+}
