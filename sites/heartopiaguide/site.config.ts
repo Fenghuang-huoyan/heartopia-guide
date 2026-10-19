@@ -21,7 +21,7 @@ export const siteConfig = {
   homeDescription:
     'Unofficial Heartopia wiki for Steam AppID 4025700. A maintained redeem-code hub, the beginner and DG level path, and seasonal farming and gold guides. Not a full fish or bug database.',
   analytics: {
-    gaId: '',
+    gaId: 'G-N5S1FVLLB0',
   },
   art: {
     hero: '/images/official/steam/library-hero.jpg',
