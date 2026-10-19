@@ -1,15 +1,14 @@
 /**
- * Adsterra Native Banner placeholder.
+ * Adsterra Native Banner for guide pages, directly after Quick Answer.
  *
- * Leave `id` empty (or prefixed with ADSTERRA_) until the zone key exists.
- * An empty key does not request invoke.js.
+ * Ops reference only — never use these as the invoke.js key:
+ * - Website ID: 6135271 (Approved), site heartopiaguide.wiki
+ * - Placement ID: 31818357 (Active)
  *
- * When you create the placement:
- * - Website: heartopiaguide.wiki
- * - Format: Native Banner
- * - Put the GET CODE path segment in `afterQuickAnswer.id` (the zone key, not the placement id)
- * - Set `invokeBase` to the host from that same GET CODE snippet
- * - Guide pages share this one slot. Do not paste the same zone key onto a second slot.
+ * The script key is the zone key in `afterQuickAnswer.id`.
+ * Script URL: `${invokeBase}/${id}/invoke.js`
+ * Adult and sensitive categories stay off. Other slots stay on ADSTERRA_ placeholders
+ * and do not request a script. Guide pages share this one zone key.
  */
 export type AdSlotConfig = {
   id: string;
@@ -21,8 +20,9 @@ export type AdSlotConfig = {
 const slots = {
   homeHero: { id: 'ADSTERRA_HOME_HERO', format: '728x90' },
   afterQuickAnswer: {
-    id: '',
+    id: 'ec52c4641a052ff6381f4fa19fa18cf6',
     format: 'native-banner',
+    invokeBase: 'https://pl31902952.profitableratecpmnetwork.com',
   },
   midArticle: { id: 'ADSTERRA_MID_ARTICLE', format: 'in-article' },
   sidebar: { id: 'ADSTERRA_SIDEBAR', format: '300x250' },
@@ -32,7 +32,7 @@ const slots = {
 export const adsConfig = {
   network: 'adsterra' as const,
   enabled: true,
-  invokeBase: 'https://example.invalid',
+  invokeBase: 'https://pl31902952.profitableratecpmnetwork.com',
   containerPrefix: 'container-',
   slots,
 };

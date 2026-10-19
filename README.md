@@ -11,13 +11,13 @@ Three layers, same idea as a small static wiki:
 | Layer | Path | Role |
 | --- | --- | --- |
 | Site config | `sites/heartopiaguide/site.config.ts` | Domain, Steam AppID, analytics, nav |
-| Ads | `sites/heartopiaguide/ads.config.ts` | Adsterra Native Banner placeholder |
+| Ads | `sites/heartopiaguide/ads.config.ts` | Adsterra Native Banner after Quick Answer |
 | Active site | `sites/active` → `heartopiaguide` | What the build actually reads |
 | Framework | `framework/` | Layout, Quick Answer, ad slot, SEO |
 | Content | `content/heartopia/` | Guide pages and JSON |
 | Routes | `src/pages/` | Home, guide slug, 404 |
 
-`analytics.gaId` is empty, so Google Analytics is not injected. The Native Banner zone key is empty, so no ad script is requested. Set both in those two files when you have real ids. One zone key only: guide pages share `afterQuickAnswer`.
+`analytics.gaId` is empty, so Google Analytics is not injected. Guide pages load one Adsterra Native Banner after Quick Answer (`afterQuickAnswer`). Website and placement ids are documented in [ADS.md](ADS.md) and are not the script key. Adult ads stay off.
 
 ## Scripts
 
