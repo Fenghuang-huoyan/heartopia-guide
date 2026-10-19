@@ -17,7 +17,7 @@ Three layers, same idea as a small static wiki:
 | Content | `content/heartopia/` | Guide pages and JSON |
 | Routes | `src/pages/` | Home, guide slug, 404 |
 
-`analytics.gaId` is empty, so Google Analytics is not injected. Guide pages load one Adsterra Native Banner after Quick Answer (`afterQuickAnswer`). Website and placement ids are documented in [ADS.md](ADS.md) and are not the script key. Adult ads stay off.
+`analytics.gaId` is `G-N5S1FVLLB0`, so production pages load Google Analytics (gtag) from the base layout. Guide pages load one Adsterra Native Banner after Quick Answer (`afterQuickAnswer`). Website and placement ids are documented in [ADS.md](ADS.md) and are not the script key. Adult ads stay off.
 
 ## Scripts
 
