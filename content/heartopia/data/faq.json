@@ -1,0 +1,47 @@
+[
+  {
+    "q": "Is this an official Heartopia site?",
+    "a": "No. heartopiaguide.wiki is a fan guide. It is not affiliated with, endorsed by, or sponsored by XD, Valve, or Steam.",
+    "featured": true
+  },
+  {
+    "q": "Where do I redeem a code?",
+    "a": "Open the watch menu (Tab on PC), then Settings, General, Redeem Code. If it is accepted, collect the reward from the mailbox in front of your house. Codes are once per account.",
+    "featured": true
+  },
+  {
+    "q": "Why does a code that is listed here fail?",
+    "a": "Trackers disagree, codes expire without a patch note, and a code you already used still looks “active” on a webpage. The mailbox is the only confirmation. Region and account age can also reject a string.",
+    "featured": true
+  },
+  {
+    "q": "Where is the full fish, bug, and recipe database?",
+    "a": "Not here, on purpose. Heartopia.Life, Heartopia.gg, and Heartodex already keep thick item databases. This wiki stays on codes, the first week, DG level, and seasonal gold.",
+    "featured": true
+  },
+  {
+    "q": "Is Heartopia free?",
+    "a": "On Steam it is free to play, with in-app purchases. Wishing Stars and similar currencies show up in code rewards; this site does not tell you to buy them.",
+    "featured": false
+  },
+  {
+    "q": "What platforms does the Steam version support?",
+    "a": "The Steam store page lists Windows, cross-platform multiplayer, and in-app purchases. The minimum spec on that page is 64-bit Windows 10, about an Intel Core i5-2500 or AMD FX-4350, 8 GB RAM, a GTX 660 Ti or R9 270 class GPU, DirectX 11, and 10 GB of disk.",
+    "featured": false
+  },
+  {
+    "q": "How do I raise DG level?",
+    "a": "DG membership is time-gated. The repeatable lever community guides agree on is the daily resident requests (often five of them) plus the main story. You cannot grind unlimited medals in one sitting to skip a missed day.",
+    "featured": true
+  },
+  {
+    "q": "Which hobby should I unlock first?",
+    "a": "If you want gold and request items, cooking is the usual first Hobby Expansion Ticket. Fishing and gardening arrive early without that choice. Pick the hobby you will actually open if you do not care about the margin.",
+    "featured": false
+  },
+  {
+    "q": "Do you collect accounts or logins?",
+    "a": "No. The site is static. Analytics and ads stay unloaded until a measurement id or an Adsterra zone key is added in the site config.",
+    "featured": false
+  }
+]

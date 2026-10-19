@@ -1,0 +1,41 @@
+Official Steam store assets for Heartopia (AppID 4025700).
+Self-hosted so the wiki does not hotlink the Steam CDN.
+Fan site: not affiliated with XD, XD Inc., XD Entertainment, Valve, or Steam.
+Store page: https://store.steampowered.com/app/4025700/Heartopia/
+Downloaded 19 Oct 2026 from shared.akamai.steamstatic.com.
+
+library-hero.jpg
+  Steam library hero, 1920x620
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4025700/library_hero.jpg
+
+header.jpg
+  Store header (hashed header_alt_assets_1), 460x215
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4025700/2228fe487077813485fe804a4f8311c289d69901/header_alt_assets_1.jpg?t=1789974308
+
+capsule-616x353.jpg
+  Store capsule, 616x353
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4025700/0d35710e88b5bb08ac54c92d6f242ed8040f6cc8/capsule_616x353.jpg?t=1789974308
+
+ss-00.jpg
+  Official store screenshot thumbnail, 600x338. Character fishing.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4025700/6752380746cc6ca97c3b3af3512ede6847124eb1/ss_6752380746cc6ca97c3b3af3512ede6847124eb1.600x338.jpg?t=1789974308
+
+ss-01.jpg
+  Official store screenshot thumbnail, 600x338. Cozy house exterior.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4025700/5e40a2c5f9197466fb950aaa4d22e580bee2aa70/ss_5e40a2c5f9197466fb950aaa4d22e580bee2aa70.600x338.jpg?t=1789974308
+
+ss-02.jpg
+  Official store screenshot thumbnail, 600x338. Town square.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4025700/786d2e2ab0a9eabe1678ef1da731579ad136d674/ss_786d2e2ab0a9eabe1678ef1da731579ad136d674.600x338.jpg?t=1789974308
+
+ss-03.jpg
+  Official store screenshot thumbnail, 600x338. Outfit customization.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4025700/deaf3082420b41090bdaaae3034a872b3359ad61/ss_deaf3082420b41090bdaaae3034a872b3359ad61.600x338.jpg?t=1789974308
+
+ss-04.jpg
+  Official store screenshot thumbnail, 600x338. Player with dogs.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4025700/971b17a8d739588611eb6cbde0de029b4c722b01/ss_971b17a8d739588611eb6cbde0de029b4c722b01.600x338.jpg?t=1789974308
+
+Classic unhashed header.jpg and capsule_616x353.jpg under /steam/apps/4025700/ returned 404
+when checked on 19 Oct 2026. These files use the hashed store_item_assets paths above,
+plus the unhashed library_hero.jpg that did respond.

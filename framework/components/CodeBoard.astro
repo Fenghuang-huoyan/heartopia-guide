@@ -1,0 +1,69 @@
+---
+import { loadData } from '../lib/content';
+
+interface CodeRow {
+  code: string;
+  reward: string;
+  status: 'newest' | 'conflict' | 'stale' | 'expired';
+  statusLabel: string;
+  note: string;
+}
+interface CodeFile {
+  checked: string;
+  groups: { id: string; title: string; intro: string; rows: CodeRow[] }[];
+}
+const data = loadData<CodeFile>('codes');
+---
+<div class="code-board">
+  <p class="checked"><b>Tracker check</b> <span>{data.checked}. Rewards are whatever the tracker printed, not a claim we redeemed the code.</span></p>
+  {data.groups.map((group) => (
+    <section>
+      <h2>{group.title}</h2>
+      <p>{group.intro}</p>
+      <div style="overflow-x:auto">
+        <table class="code-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Reported reward</th>
+              <th>Status</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            {group.rows.map((row) => (
+              <tr>
+                <td>
+                  <span class="code-cell">
+                    <code>{row.code}</code>
+                    <button class="copy" type="button" data-code={row.code}>Copy</button>
+                  </span>
+                </td>
+                <td>{row.reward}</td>
+                <td><span class:list={['badge', row.status]}>{row.statusLabel}</span></td>
+                <td>{row.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  ))}
+</div>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const code = button.dataset.code ?? '';
+      try {
+        await navigator.clipboard.writeText(code);
+        const previous = button.textContent;
+        button.textContent = 'Copied';
+        window.setTimeout(() => {
+          button.textContent = previous;
+        }, 1200);
+      } catch {
+        button.textContent = 'Select the code';
+      }
+    });
+  });
+</script>
