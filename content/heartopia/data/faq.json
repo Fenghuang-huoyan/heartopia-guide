@@ -41,7 +41,7 @@
   },
   {
     "q": "Do you collect accounts or logins?",
-    "a": "No. The site is static. Analytics and ads stay unloaded until a measurement id or an Adsterra zone key is added in the site config.",
+    "a": "No. The site is static. Google Analytics is not loaded. A labeled Adsterra Native Banner loads after the Quick Answer. Adult ads stay off.",
     "featured": false
   }
 ]
