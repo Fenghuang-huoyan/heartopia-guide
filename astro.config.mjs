@@ -5,6 +5,7 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { rehypeTableScroll } from './framework/lib/rehype-table-scroll.js';
 
 function sitemapXmlAlias() {
   return {
@@ -22,7 +23,14 @@ function sitemapXmlAlias() {
 export default defineConfig({
   site: 'https://heartopiaguide.wiki',
   trailingSlash: 'never',
-  integrations: [mdx(), sitemap(), sitemapXmlAlias()],
+  // Guide pages are .mdx. The MDX integration must receive the plugin or
+  // those tables stay unwrapped. markdown.rehypePlugins covers .md files a
+  // later copy of this template might add. When both are set, @astrojs/mdx
+  // uses the integration list, so the plugin is named in each place.
+  markdown: {
+    rehypePlugins: [rehypeTableScroll],
+  },
+  integrations: [mdx({ rehypePlugins: [rehypeTableScroll] }), sitemap(), sitemapXmlAlias()],
   vite: {
     plugins: [tailwindcss()],
     resolve: {
